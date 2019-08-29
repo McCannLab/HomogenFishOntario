@@ -1,0 +1,53 @@
+Package: HomogenFishOntario
+Type: Package
+Title: Analysis for study described in DOI: XXX
+Version: 1.0.0
+Date: 2019-29-08
+Authors@R: c(
+    person(given = "Kevin", family = "Cazelles", comment = c(ORCID = "0000-0001-6619-9874"), email = "kcazelle@uoguelph.ca", role = c("aut", "cre")),
+    person(given = "Timothy", family = "Bartley", role = c("aut")),
+    person(given = "Marie-Hélène", family = "Brice", role = c("aut")),
+    person(given = "Matthew", family = "Guzzo", role = c("aut")),
+    person(given = "Andrew", family = "MacDougall", role = c("aut")),
+    person(given = "Kevin", family = "McCann", role = c("aut"))
+      )
+Description: Reproduce analysis carried out in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change".
+URL: https://github.com/McCannLab/homogenOntario
+BugReports: https://github.com/McCannLab/homogenOntario/issues
+License: GPL (>= 2)
+LazyData: true
+Depends:
+  emojifont,
+  R (>= 3.3.0)
+Imports:
+  ade4,
+  ape,
+  crayon,
+  dplyr,
+  ecoocc,
+  graphicsutils,
+  inSilecoMisc,
+  latex2exp,
+  lmodel2,
+  magrittr,
+  MuMIn,
+  MASS,
+  sf,
+  showtext,
+  stats,
+  sysfonts,
+  taxize
+Remotes:
+  inSileco/graphicsutils,
+  inSileco/inSilecoMisc,
+  KevCaz/ecoocc
+Suggests:
+    knitr,
+    mapview,
+    rfishbase,
+    rmarkdown,
+    testthat
+Encoding: UTF-8
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)

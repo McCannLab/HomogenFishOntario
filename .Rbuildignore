@@ -1,0 +1,14 @@
+^Meta$
+^doc$
+^docs$
+^\.binder$
+^\.Rproj\.user$
+^.*\.Rproj$
+^appveyor\.yml$
+^\.travis\.yml$
+^\.gitignore
+^output
+^Makefile
+^LICENSE
+^inst/ms$
+^data/sf_ahi_bsm0\.rda$

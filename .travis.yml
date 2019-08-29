@@ -1,0 +1,31 @@
+language: r
+warnings_are_errors: false
+sudo: required
+cache: packages
+
+matrix:
+  include:
+    - os: osx
+      r: release
+      env: NOT_CRAN=true
+    - os: linux
+      dist: xenial
+      r: devel
+      env: NOT_CRAN=true
+      addons:
+        apt:
+          packages:
+            - libudunits2-dev
+            - libproj-dev
+            - libgeos-dev
+            - libgdal-dev
+notifications:
+  email:
+    on_success: never # change or always
+    on_failure: change
+
+r_github_packages:
+  - r-lib/covr
+
+after_success:
+  - Rscript -e 'HomogenFishOntario::pipeline()'
