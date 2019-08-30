@@ -29,7 +29,8 @@ then run:
 `HomogenFishOntario::pipeline()`
 
 
-Note that this was created with the great [holepunch](https://karthik.github.io/holepunch/) package.
+Note that this was created with the great R package [holepunch](https://karthik.github.io/holepunch/).
+
 
 
 ## Install and use the package
@@ -42,7 +43,7 @@ remotes::install_github("McCannLab/HomogenFishOntario")
 ```
 
 This should install all dependencies. In case you are encountering difficulties
-with packages on GitHub, below are the line to install remote packages :
+with the R packages available on GitHub, use the following:
 
 ```r
 remotes::install_github(
@@ -50,11 +51,12 @@ remotes::install_github(
 )
 ```
 
-Once installed you can simply run:
+Once installed, you can simply reproduce the analysis like so:
 
 ```r
 HomogenFishOntario::pipeline()
 ```
+
 
 
 # An R :package:?
