@@ -1,11 +1,19 @@
 #' Pipeline
 #'
-#' This function performs the analysis and creates the figure included
+#' This function performs the analysis and creates all figures included
 #' in Cazelles (2019).
+#'
+#' @param tnr a logical. Should Times New Roman be used as a typeface?
 #'
 #' @export
 
-pipeline <- function() {
+pipeline <- function(tnr = TRUE) {
+  
+  if (tnr) {
+    showtext_auto()
+    font_add(family = 'TNM', regular = system.file("extdata", 
+      "times-new-roman.ttf", package = "HomogenFishOntario"))
+  }
   # As we were not allowed to share lake location `sf_bsm_ahi` is not included
   # res0 <- an1_gain_loss(sf_ahi_bsm0)
   res0 <- an1_gain_loss(sf_bsm_ahi)

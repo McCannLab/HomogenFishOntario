@@ -4,9 +4,12 @@
 \alias{pipeline}
 \title{Pipeline}
 \usage{
-pipeline()
+pipeline(tnr = TRUE)
+}
+\arguments{
+\item{tnr}{a logical. Should Times New Roman be used as a typeface?}
 }
 \description{
-This function performs the analysis and creates the figure included
+This function performs the analysis and creates all figures included
 in Cazelles (2019).
 }

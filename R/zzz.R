@@ -134,20 +134,19 @@ anonymize_data <- function(x) {
 # sf_bsm_ahi <- anonymize_data(sf_ahi_bsm0)
 # save(sf_bsm_ahi, file = "data/sf_bsm_ahi.rda")
 
-############ Graph helpers
 
-showtext_auto()
-font_add(family = 'TNM', regular = "Times_New_Roman.ttf")
+
+
+############ Graph helpers
 
 
 ## Some graphical parameters and functions
 myred <- "#d03757"
 mybl <- "grey10"
-cex_let <- 1.4
-cex_txt <- 1.2
 pal <- c('grey10', 'grey55')
 palb <- lighten(c('#071b32'), c(0, 30, 60))
-
+cex_let <- 1.4
+cex_txt <- 1.2
 
 #
 custom_ticks <- function(x, y, pal) {
