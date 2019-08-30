@@ -46,6 +46,15 @@ fig4_table <- function(x, nlk, cex_bas = 5.4) {
   spc_nm[grepl(x = spc_nm, "Osmer")] <- "Osmerus mordax*"
   vc_bodysize <- as.character(signif(10^x$log10BS_bsm, 3))
 
+  ## files
+  trout <- system.file("extdata/img", "lake_trout_reusable.png",
+    package = "HomogenFishOntario")
+  perch <- system.file("extdata/img", "yellow_perch_reusable.png",
+    package = "HomogenFishOntario")
+  sucker <- system.file("extdata/img", "white_sucker_reusable.png",
+    package = "HomogenFishOntario")
+  hook <- system.file("extdata/img", "hook.png", package = "HomogenFishOntario")
+
   checkOutputFolder()
   png("output/fig4_table.png", res = 900, width = 260, height = 180,
     units = "mm")
@@ -70,7 +79,7 @@ fig4_table <- function(x, nlk, cex_bas = 5.4) {
     #
     ##-- Bait
     if (!is.na(x$baitOntario[i]) & x$baitOntario[i] > 0) {
-      pchImage(-4.15, i, file = "inst/extdata/img/hook.png", cex.x = 0.11, cex.y = 0.2)
+      pchImage(-4.15, i, file = hook, cex.x = 0.11, cex.y = 0.2)
     }
     ##-- Socked fish
     if (x$stocked[i])
@@ -86,12 +95,15 @@ fig4_table <- function(x, nlk, cex_bas = 5.4) {
 
     if (vc_tl[i] > 1) {
       if (vc_tl[i] > 2) {
-        pchImage(-2.6, i, file = "inst/extdata/img/lake_trout_reusable.png", cex.x = 0.24, cex.y = 0.18, col = palg2[vc_tl[i]])
+        pchImage(-2.6, i, file = trout, cex.x = 0.24, cex.y = 0.18,
+          col = palg2[vc_tl[i]])
       } else {
-        pchImage(-2.6, i, file = "inst/extdata/img/yellow_perch_reusable.png", cex.x = 0.24, cex.y = 0.18, col = palg2[vc_tl[i]])
+        pchImage(-2.6, i, file = perch, cex.x = 0.24, cex.y = 0.18,
+          col = palg2[vc_tl[i]])
       }
     } else {
-      pchImage(-2.6, i, file = "inst/extdata/img/white_sucker_reusable.png", cex.x = 0.24, cex.y = 0.18, col = palg2[vc_tl[i]])
+      pchImage(-2.6, i, file = sucker, cex.x = 0.24, cex.y = 0.18,
+        col = palg2[vc_tl[i]])
     }
     ##-- Mean depth
     dph <- x$meanDepth_bsm[i]
@@ -161,9 +173,12 @@ fig4_table <- function(x, nlk, cex_bas = 5.4) {
   for (i in c(-0.5, 40.5)) text(c(2, 200, 400, 543) * 5.2/545, rep(i, 4), labels = c(0, 200, 400, nlk), cex = cex_bas)
 
   ## Legend TL pchImage(-3.3, i, file = 'inst/extdata/img/hook.png', cex.x = .11, cex.y = .2)
-  pchImage(-11.5, -0.8, file = "inst/extdata/img/white_sucker_reusable.png", cex.x = 0.25, cex.y = 0.75 * 0.25, col = palg2[1])
-  pchImage(-11.5 + 2.3, -0.8, file = "inst/extdata/img/yellow_perch_reusable.png", cex.x = 0.25, cex.y = 0.75 * 0.25, col = palg2[2])
-  pchImage(-11.5 + 2 * 2.3, -0.8, file = "inst/extdata/img/lake_trout_reusable.png", cex.x = 0.25, cex.y = 0.75 * 0.25, col = palg2[3])
+  pchImage(-11.5, -0.8, file = sucker, cex.x = 0.25, cex.y = 0.75 * 0.25,
+      col = palg2[1])
+  pchImage(-11.5 + 2.3, -0.8, file = perch, cex.x = 0.25, cex.y = 0.75 * 0.25,
+      col = palg2[2])
+  pchImage(-11.5 + 2 * 2.3, -0.8, file = trout, cex.x = 0.25,
+    cex.y = 0.75 * 0.25, col = palg2[3])
   text(-11.32 + 2.3 * (0:2), rep(-0.88, 3), labels = c("Consumer", "Mesopredator", "Top predator"), pos = 4, cex = 1.1 * cex_bas)
 
   ### TG

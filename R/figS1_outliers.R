@@ -25,7 +25,7 @@ figS1_outliers <- function(x, cex_bas = 5) {
     cbind(occ_BSM - occ_AHI, (occ_BSM - occ_AHI)/occ_AHI)
   names(tmp) <- c("idOnt", "absol", "rela")
   tmp %<>% merge(df_species_info[, c("idOnt", "scientificName")], by = "idOnt")
-  tmp %<>% merge(homogenOntario::df_fished[, c("scientificName", "GameFish")],
+  tmp %<>% merge(df_fished[, c("scientificName", "GameFish")],
     by = "scientificName")
   ## 1 -> fished; 2 -> non fished
   tmp["GameFish"] <- tmp["GameFish"] + 2

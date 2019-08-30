@@ -37,7 +37,6 @@ NULL
 ############### HELPERS Functions ###############
 
 
-
 checkOutputFolder <- function() if (!dir.exists("output")) dir.create("output")
 
 getNamesSp <- function(vec_idOnt, keepOrder = TRUE) {
@@ -116,6 +115,10 @@ fish_nofish <- function(x, y) {
   )
 }
 
+utils::globalVariables(
+  c("df_species_info", "gadm_ontario", "sf_bsm_ahi", "df_fished"),
+  "HomogenFishOntario"
+)
 
 anonymize_data <- function(x) {
   tmp_crs <- sf::st_crs(x)

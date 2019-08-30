@@ -36,7 +36,8 @@ Imports:
   showtext,
   stats,
   sysfonts,
-  taxize
+  taxize,
+  utils
 Remotes:
   inSileco/graphicsutils,
   inSileco/inSilecoMisc,
