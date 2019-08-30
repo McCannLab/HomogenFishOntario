@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reproduce the analysis carried out in Cazelles et. al (2019) • homogenOntario</title>
+<title>Reproduce the analysis carried out in Cazelles et. al (2019) • HomogenFishOntario</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">homogenOntario</a>
+        <a class="navbar-link" href="../index.html">HomogenFishOntario</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
@@ -43,10 +43,19 @@
   </a>
 </li>
 <li>
-  <a href="../articles/homogenOntario.html">Get started</a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="../articles/homogenOntario.html">Reproduce the analysis carried out in Cazelles et. al (2019)</a>
+    </li>
+  </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -71,7 +80,7 @@
       <h1>Reproduce the analysis carried out in Cazelles et. al (2019)</h1>
                         <h4 class="author">Kevin Cazelles et al.</h4>
                         
-            <h4 class="date">2019-08-29</h4>
+            <h4 class="date">2019-08-30</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/McCannLab/homogenOntario/blob/master/vignettes/homogenOntario.Rmd"><code>vignettes/homogenOntario.Rmd</code></a></small>
       <div class="hidden name"><code>homogenOntario.Rmd</code></div>
@@ -80,17 +89,17 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(homogenOntario)</a>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(HomogenFishOntario)</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rfishbase)</a></code></pre></div>
 <div id="context" class="section level1">
 <h1 class="hasAnchor">
 <a href="#context" class="anchor"></a>Context</h1>
-<p>This is a small web page that guides the reader through the code we used to carry out the analysis in Cazelles (2019). Note that <code><a href="../reference/pipeline.html">pipeline()</a></code> is a function that runs the entire analysis. Note that we were not allwed to share the location and trace back so lake renamed and shuffled.</p>
+<p>This is a small web page that guides the reader through the code we used to carry out the analysis in Cazelles (2019). Note that <code><a href="../reference/pipeline.html">pipeline()</a></code> is a function that runs the entire analysis. We are not allowed to share the exact lake locations, therefore the context map and 3 supplementary figures cannot be reproduced.</p>
 </div>
 <div id="data" class="section level1">
 <h1 class="hasAnchor">
 <a href="#data" class="anchor"></a>Data</h1>
-<p>The file <code>sf_bsnm_ahi</code> includes presence and absence in both survey for all species as well as the corresponding abiotic data. Climate data for every lakes are including in <code>lk_climate</code>.</p>
+<p>The file <code>sf_bsm_ahi</code> includes presence and absence in both survey for all species as well as the lake descriptors and climate data.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(sf_bsm_ahi[, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>])</a>
 <a class="sourceLine" id="cb2-2" title="2"><span class="co">#&gt; Simple feature collection with 6 features and 10 fields</span></a>
 <a class="sourceLine" id="cb2-3" title="3"><span class="co">#&gt; geometry type:  POINT</span></a>
@@ -125,7 +134,7 @@
 <div id="taxonomic-hierarchy" class="section level3">
 <h3 class="hasAnchor">
 <a href="#taxonomic-hierarchy" class="anchor"></a>Taxonomic hierarchy</h3>
-<p>We used <code><a href="../reference/an0_retrieve_species_info.html">an0_retrieve_species_info()</a></code> to retrieved taxonomic hierarchy, it basically wraps around functions included in <a href="https://github.com/ropensci/taxize">taxize</a>. As an example, to retrieve taxonomic hierarchy for white sucker (<em>Catostomus commersonii</em>) and lake trout (<em>Salvelinus namaycush</em>), we ran:</p>
+<p>We used <code><a href="../reference/an0_retrieve_species_info.html">an0_retrieve_species_info()</a></code> to retrieved taxonomic hierarchy. It basically wraps around <a href="https://github.com/ropensci/taxize">taxize</a> functions. As an example, to retrieve taxonomic hierarchy for white sucker (<em>Catostomus commersonii</em>) and lake trout (<em>Salvelinus namaycush</em>), we ran:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">sps &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Catostomus commersonii"</span>, <span class="st">"Salvelinus namaycush"</span>)</a>
 <a class="sourceLine" id="cb3-2" title="2">taxo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/an0_retrieve_species_info.html">an0_retrieve_species_info</a></span>(sps)</a>
 <a class="sourceLine" id="cb3-3" title="3"><span class="co">#&gt; ══  1 queries  ═══════════════</span></a>
@@ -156,7 +165,7 @@
 <div id="other-traits" class="section level3">
 <h3 class="hasAnchor">
 <a href="#other-traits" class="anchor"></a>Other traits</h3>
-<p>We retrieved data from the literature and from <a href="http://www.fishbase.org/search.php">Fishbase</a> using the <code><a href="https://www.rdocumentation.org/packages/rfishbase/topics/species">species()</a></code> function of <a href="https://cran.r-project.org/web/packages/rfishbase/vignettes/tutorial.html">rfishbase</a> (after validating species names with <code><a href="https://www.rdocumentation.org/packages/rfishbase/topics/validate_names">validate_names()</a></code>). For the two species above used as an example, we ran:</p>
+<p>We retrieved data from the literature and from <a href="http://www.fishbase.org/search.php">Fishbase</a> using the <code><a href="https://www.rdocumentation.org/packages/rfishbase/topics/species">species()</a></code> function of <a href="https://cran.r-project.org/web/packages/rfishbase/vignettes/tutorial.html">rfishbase</a> (after validating species names with <code><a href="https://www.rdocumentation.org/packages/rfishbase/topics/validate_names">validate_names()</a></code>). For the two species we used above as an example, we would run:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">fie &lt;-<span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"LongevityWild"</span>, <span class="st">"UsedforAquaculture"</span>, <span class="st">"UsedasBait"</span>, <span class="st">"GameFish"</span>,</a>
 <a class="sourceLine" id="cb4-2" title="2">   <span class="st">"Importance"</span>)</a>
 <a class="sourceLine" id="cb4-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/rfishbase/topics/species">species</a></span>(sps, <span class="dt">field =</span> fie)</a>
@@ -170,7 +179,7 @@
 <h3 class="hasAnchor">
 <a href="#df_species_info" class="anchor"></a><code>df_species_info</code>
 </h3>
-<p>We ran the code described above for the entire set of species and stored the data thereby obtained in <code>df_species_info</code>.</p>
+<p>We actually ran the code described above for the entire set of species and stored the data thereby obtained in <code>df_species_info</code>.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(df_species_info)</a>
 <a class="sourceLine" id="cb5-2" title="2"><span class="co">#&gt;  [1] "idOnt"                 "sci_hasnain"          </span></a>
 <a class="sourceLine" id="cb5-3" title="3"><span class="co">#&gt;  [3] "rfbName"               "Listed"               </span></a>
@@ -297,6 +306,7 @@
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw"><a href="../reference/fig2_homogenization.html">fig2_homogenization</a></span>(galo)</a></code></pre></div>
 <p><img src="homogenOntario_files/figure-html/unnamed-chunk-3-1.png" width="864"></p>
 <p>which writes the figure above in <code>output/fig2_homogenization.png</code>. Similarly, <code><a href="../reference/fig3_regressions.html">fig3_regressions(galo, mods)</a></code> creates <code>output/fig2_homogenization.png</code> (and so forth).</p>
+<p>Note that as we are not allowed to share lake location Figure S3 S4 and S6 are not reproducible.</p>
 </div>
   </div>
 

@@ -8,8 +8,7 @@
 
 Analysis pipeline used in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change" by Cazelles et al. (2019) DOI: 2Badded. 
 
-:warning: We are not allowed to share the exact lake locations of the lake, therefore, the context map and 2 supplementary figures cannot be reproduced.
-The data included (again without lake location) are released under [CC BY NC](https://creativecommons.org/licenses/by-nc/2.0/).
+:warning: We are not allowed to share the exact lake locations, therefore, the context map and 3 supplementary figures cannot be reproduced with this research compendium. The data included in this package are released under [CC BY NC](https://creativecommons.org/licenses/by-nc/2.0/).
 
 
 # How to reproduce the analysis?
@@ -19,16 +18,17 @@ Two options:
 1. use the binder;
 2. install and use this package.
 
-Note the vignettes ["Reproduce the analysis carried out in Cazelles et. al (2019)"](http://mccannlab.ca/HomogenFishOntario/articles/homogenOntario.html) guides you through the different functions included in the package.
+Moreover the vignettes ["Reproduce the analysis carried out in Cazelles et. al (2019)"](http://mccannlab.ca/HomogenFishOntario/articles/homogenOntario.html) guides you through the different functions included in the package.
 
 
 
 ## Using the binder
 
-Click on [![Launch Rstudio
+You can use [Binder](https://mybinder.readthedocs.io/en/latest/index.html#) by
+clicking on the following badge: [![Launch Rstudio
 Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/McCannLab/HomogenFishOntario/master?urlpath=rstudio)
-which  sets up an R environment (takes some time 15-20min :hourglass:) and then
-a a RStudio instance is launched. Once done, simply run :
+which sets up an R environment (takes 15-20min :hourglass:) and then a launches
+an [RStudio](https://www.rstudio.com/) instance. Once done, one can simply run:
 
 ```R
 remotes::install_github("McCannLab/HomogenFishOntario")
@@ -41,7 +41,7 @@ NB: the binder was created with the great R package [holepunch](https://karthik.
 
 
 
-## Install and use the package
+## Install and use this R package
 
 First, install the package:
 
@@ -50,8 +50,8 @@ install.packages("remotes")
 remotes::install_github("McCannLab/HomogenFishOntario")
 ```
 
-This should install all dependencies. In case you are encountering difficulties
-with the R packages available on GitHub, use the following:
+This should install all dependencies, but in case you are encountering
+difficulties with the R packages available on GitHub, use the following:
 
 ```r
 remotes::install_github(
@@ -66,11 +66,10 @@ HomogenFishOntario::pipeline()
 ```
 
 
-
 # An R :package:?
 
 The form of an R package in a GitHub repository is quite convenient:
 
 - to share of the analysis pipeline;
-- to check code quality (even without a proper set of test, several aspect are covered when the package is checked);
+- to check code quality (even without a proper set of test, several aspects are covered when the package is checked);
 - to report potential issues.

@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Analysis for study described in DOI: XXX • homogenOntario</title>
+<title>Analysis for study described in DOI: 2Badded • HomogenFishOntario</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Analysis for study described in DOI: XXX">
+<script src="pkgdown.js"></script><meta property="og:title" content="Analysis for study described in DOI: 2Badded">
 <meta property="og:description" content='Reproduce analysis carried out in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change".'>
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">homogenOntario</a>
+        <a class="navbar-link" href="index.html">HomogenFishOntario</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
@@ -43,10 +43,19 @@
   </a>
 </li>
 <li>
-  <a href="articles/homogenOntario.html">Get started</a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/homogenOntario.html">Reproduce the analysis carried out in Cazelles et. al (2019)</a>
+    </li>
+  </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -72,37 +81,41 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#homogenfishontario" class="anchor"></a>HomogenFishOntario</h1></div>
 <p>📖 Cazelles et al. (2019) <a href="DOI:2Badded" class="uri">DOI:2Badded</a> - research compendium</p>
-<p>Analysis pipeline for the analysis carried out in “Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change” by Cazelles et al. (2019) DOI: 2Badded. Note that we were nota allowed to release the exact lake locations and therefore the context map and 2 supplementary figures cannot be reproduced.</p>
+<p><a href="https://mybinder.org/v2/gh/McCannLab/HomogenFishOntario/master?urlpath=rstudio"><img src="http://mybinder.org/badge_logo.svg" alt="Launch Rstudio Binder"></a> <a href="https://travis-ci.org/McCannLab/HomogenFishOntario"><img src="https://travis-ci.org/McCannLab/HomogenFishOntario.svg?branch=master" alt="Build Status"></a> <a href="https://ci.appveyor.com/project/KevCaz/homogenfishontario/branch/master"><img src="https://ci.appveyor.com/api/projects/status/iw2lkapvla1flr8v/branch/master?svg=true" alt="Build status"></a></p>
+<p>Analysis pipeline used in “Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change” by Cazelles et al. (2019) DOI: 2Badded.</p>
+<p>⚠️ We are not allowed to share the exact lake locations, therefore, the context map and 3 supplementary figures cannot be reproduced with this research compendium. The data included in this package are released under <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY NC</a>.</p>
 </div>
 <div id="how-to-reproduce-the-analysis" class="section level1">
 <h1 class="hasAnchor">
 <a href="#how-to-reproduce-the-analysis" class="anchor"></a>How to reproduce the analysis?</h1>
-<p>There are two ways:</p>
-<ul>
-<li>use the binder</li>
-<li>install and use the package</li>
-</ul>
-<p>the vignettes <a href="">“Reproduce the analysis carried out in Cazelles et. al (2019)”</a> guide you through the different functions.</p>
+<p>Two options:</p>
+<ol>
+<li>use the binder;</li>
+<li>install and use this package.</li>
+</ol>
+<p>Moreover the vignettes <a href="http://mccannlab.ca/HomogenFishOntario/articles/homogenOntario.html">“Reproduce the analysis carried out in Cazelles et. al (2019)”</a> guides you through the different functions included in the package.</p>
 <div id="using-the-binder" class="section level2">
 <h2 class="hasAnchor">
 <a href="#using-the-binder" class="anchor"></a>Using the binder</h2>
-<p><a href="https://karthik.github.io/holepunch/">holepunch</a></p>
-<p>Click on <a href="https://mybinder.org/v2/gh/McCannLab/homogenOntario/master?urlpath=rstudio"><img src="http://mybinder.org/badge_logo.svg" alt="Launch Rstudio Binder"></a></p>
-<p>then run:</p>
-<p><code><a href="https://www.rdocumentation.org/packages/base/topics/library">library(homogenOntario)</a></code></p>
+<p>You can use <a href="https://mybinder.readthedocs.io/en/latest/index.html#">Binder</a> by clicking on the following badge: <a href="https://mybinder.org/v2/gh/McCannLab/HomogenFishOntario/master?urlpath=rstudio"><img src="http://mybinder.org/badge_logo.svg" alt="Launch Rstudio Binder"></a> which sets up an R environment (takes 15-20min ⌛) and then a launches an <a href="https://www.rstudio.com/">RStudio</a> instance. Once done, one can simply run:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"McCannLab/HomogenFishOntario"</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"># this first step is quick cause all packages required are already installed!</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(HomogenFishOntario)</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="kw"><a href="reference/pipeline.html">pipeline</a></span>()</a></code></pre></div>
+<p>NB: the binder was created with the great R package <a href="https://karthik.github.io/holepunch/">holepunch</a>!</p>
 </div>
-<div id="install-and-use-the-package" class="section level2">
+<div id="install-and-use-this-r-package" class="section level2">
 <h2 class="hasAnchor">
-<a href="#install-and-use-the-package" class="anchor"></a>Install and use the package</h2>
-<p>To install the package using the following lines of code:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"remotes"</span>)</a>
-<a class="sourceLine" id="cb1-2" title="2">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"McCannLab/homogenOntario"</span>)</a></code></pre></div>
-<p>This should also installed all dependencies. In case are encountering difficulties with packages on GitHub, below are the line to install remote packages :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(</a>
-<a class="sourceLine" id="cb2-2" title="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"KevCaz/ecoocc"</span>, <span class="st">"inSileco/graphicsutils"</span>, <span class="st">"inSileco/inSilecoMisc"</span>)</a>
-<a class="sourceLine" id="cb2-3" title="3">)</a></code></pre></div>
-<p>Once installed you can simply run:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">homogenOntario<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/homogenOntario/topics/pipeline">pipeline</a></span>()</a></code></pre></div>
+<a href="#install-and-use-this-r-package" class="anchor"></a>Install and use this R package</h2>
+<p>First, install the package:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"remotes"</span>)</a>
+<a class="sourceLine" id="cb2-2" title="2">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"McCannLab/HomogenFishOntario"</span>)</a></code></pre></div>
+<p>This should install all dependencies, but in case you are encountering difficulties with the R packages available on GitHub, use the following:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"KevCaz/ecoocc"</span>, <span class="st">"inSileco/graphicsutils"</span>, <span class="st">"inSileco/inSilecoMisc"</span>)</a>
+<a class="sourceLine" id="cb3-3" title="3">)</a></code></pre></div>
+<p>Once installed, you can simply reproduce the analysis like so:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">HomogenFishOntario<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/HomogenFishOntario/topics/pipeline">pipeline</a></span>()</a></code></pre></div>
 </div>
 </div>
 <div id="an-r" class="section level1">
@@ -111,7 +124,7 @@
 <p>The form of an R package in a GitHub repository is quite convenient:</p>
 <ul>
 <li>to share of the analysis pipeline;</li>
-<li>to check code quality (even without a proper set of test, several aspect are covered when the package is checked);</li>
+<li>to check code quality (even without a proper set of test, several aspects are covered when the package is checked);</li>
 <li>to report potential issues.</li>
 </ul>
 </div>

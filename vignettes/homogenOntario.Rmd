@@ -35,14 +35,14 @@ library(rfishbase)
 
 # Context
 
-This is a small web page that guides the reader through the code we used to carry out the analysis in Cazelles (2019). Note that `pipeline()` is a function that runs the entire analysis. Note that we were not allwed to share the location and trace back so lake renamed and shuffled.
+This is a small web page that guides the reader through the code we used to carry out the analysis in Cazelles (2019). Note that `pipeline()` is a function that runs the entire analysis. We are not allowed to share the exact lake locations, therefore the context map and 3 supplementary figures cannot be reproduced.
 
 
 # Data
 
-The file `sf_bsnm_ahi` includes presence and absence in both survey for all
-species as well as the corresponding abiotic data. Climate data for every lakes
-are including in `lk_climate`.
+The file `sf_bsm_ahi` includes presence and absence in both survey for all
+species as well as the lake descriptors and climate data. 
+
 
 ```{R map, fig.height = 7}
 head(sf_bsm_ahi[, 1:10])
@@ -54,11 +54,10 @@ head(sf_bsm_ahi[, 1:10])
 
 ### Taxonomic hierarchy
 
-We used `an0_retrieve_species_info()` to retrieved taxonomic hierarchy, it
-basically wraps around functions included in
-[taxize](https://github.com/ropensci/taxize). As an example, to retrieve
-taxonomic hierarchy for white sucker (*Catostomus commersonii*) and
-lake trout (*Salvelinus namaycush*), we ran:
+We used `an0_retrieve_species_info()` to retrieved taxonomic hierarchy. It
+basically wraps around [taxize](https://github.com/ropensci/taxize) functions.
+As an example, to retrieve taxonomic hierarchy for white sucker (*Catostomus
+commersonii*) and lake trout (*Salvelinus namaycush*), we ran:
 
 ```{R taxo}
 sps <- c("Catostomus commersonii", "Salvelinus namaycush")
@@ -73,7 +72,7 @@ We retrieved data from the literature and from
 [Fishbase](http://www.fishbase.org/search.php) using the `species()` function of
 [rfishbase](https://cran.r-project.org/web/packages/rfishbase/vignettes/tutorial.html)
 (after validating species names with `validate_names()`). For the two species
-above used as an example, we ran:
+we used above as an example, we would run:
 
 ```{R}
 fie <-  c("LongevityWild", "UsedforAquaculture", "UsedasBait", "GameFish",
@@ -83,7 +82,7 @@ species(sps, field = fie)
 
 ### `df_species_info`
 
-We ran the code described above for the entire set of species and stored the data thereby obtained in `df_species_info`.
+We actually ran the code described above for the entire set of species and stored the data thereby obtained in `df_species_info`.
 
 ```{R}
 names(df_species_info)
@@ -149,3 +148,5 @@ fig2_homogenization(galo, asfinal = FALSE)
 ```
 
 which writes the figure above in `output/fig2_homogenization.png`. Similarly, `fig3_regressions(galo, mods)` creates `output/fig2_homogenization.png` (and so forth).
+
+Note that as we are not allowed to share lake location Figure S3 S4 and S6 are not reproducible.

@@ -37,7 +37,7 @@ pipeline <- function(tnr = TRUE) {
   figS1_outliers(an1_gain_loss(sf_bsm_ahi, rm_outlier = FALSE))
   figS2_abiotic(res0)
   # Cannot be run as exact lake locations are required
-  #figS3_lossgain(res0)
+  # figS3_lossgain(res0)
   # figS4_homogenization_panels()
   figS5_saturation(res0)
   # Cannot be run as exact lake latitudes are required
