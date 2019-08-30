@@ -6,7 +6,10 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/iw2lkapvla1flr8v/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/homogenfishontario/branch/master)
 
 
-Analysis pipeline used in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change" by Cazelles et al. (2019) DOI: 2Badded. Note that we were not allowed to release lake locations and therefore the context map as well as 2 supplementary figures cannot be reproduced.
+Analysis pipeline used in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change" by Cazelles et al. (2019) DOI: 2Badded. 
+
+:warning: We are not allowed to share the exact lake locations of the lake, therefore, the context map and 2 supplementary figures cannot be reproduced.
+The data included (again without lake location) are released under [CC BY NC](https://creativecommons.org/licenses/by-nc/2.0/).
 
 
 # How to reproduce the analysis?
@@ -22,14 +25,19 @@ Note the vignettes ["Reproduce the analysis carried out in Cazelles et. al (2019
 
 ## Using the binder
 
-Click on [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/McCannLab/HomogenFishOntario/master?urlpath=rstudio)
+Click on [![Launch Rstudio
+Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/McCannLab/HomogenFishOntario/master?urlpath=rstudio)
+which  sets up an R environment (takes some time 15-20min :hourglass:) and then
+a a RStudio instance is launched. Once done, simply run :
 
-then run:
+```R
+remotes::install_github("McCannLab/HomogenFishOntario")
+# this first step is quick cause all packages required are already installed!
+library(HomogenFishOntario)
+pipeline()
+```
 
-`HomogenFishOntario::pipeline()`
-
-
-Note that this was created with the great R package [holepunch](https://karthik.github.io/holepunch/).
+NB: the binder was created with the great R package [holepunch](https://karthik.github.io/holepunch/)!
 
 
 
