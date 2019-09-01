@@ -4,6 +4,11 @@
 [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/McCannLab/HomogenFishOntario/master?urlpath=rstudio)
 [![Build Status](https://travis-ci.org/McCannLab/HomogenFishOntario.svg?branch=master)](https://travis-ci.org/McCannLab/HomogenFishOntario)
 [![Build status](https://ci.appveyor.com/api/projects/status/iw2lkapvla1flr8v/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/homogenfishontario/branch/master)
+[![DOI](https://zenodo.org/badge/205234842.svg)](https://zenodo.org/badge/latestdoi/205234842)
+
+
+
+
 
 
 Analysis pipeline used in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change" by Cazelles et al. (2019) DOI: 2Badded. 
