@@ -2,7 +2,7 @@ Package: HomogenFishOntario
 Type: Package
 Title: Analysis for study described in DOI: 2Badded
 Version: 1.0.0
-Date: 2019-30-08
+Date: 2019-09-01
 Authors@R: c(
     person(given = "Kevin", family = "Cazelles", comment = c(ORCID = "0000-0001-6619-9874"), email = "kcazelle@uoguelph.ca", role = c("aut", "cre")),
     person(given = "Timothy", family = "Bartley", role = c("aut")),
@@ -12,8 +12,8 @@ Authors@R: c(
     person(given = "Kevin", family = "McCann", role = c("aut"))
       )
 Description: Reproduce analysis carried out in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change".
-URL: https://github.com/McCannLab/homogenOntario
-BugReports: https://github.com/McCannLab/homogenOntario/issues
+URL: https://github.com/McCannLab/HomogenFishOntario, http://mccannlab.ca/HomogenFishOntario/
+BugReports: https://github.com/McCannLab/HomogenFishOntario/issues
 License: GPL (>= 2)
 LazyData: true
 Depends:
