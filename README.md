@@ -1,5 +1,5 @@
 # HomogenFishOntario
-:book: Cazelles et al. (2019) DOI:2Badded - research compendium
+:book: [Cazelles et al. (2019) DOI:10.1111/gcb.14829](https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.14829) - research compendium
 
 [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/McCannLab/HomogenFishOntario/master?urlpath=rstudio)
 [![Build Status](https://travis-ci.org/McCannLab/HomogenFishOntario.svg?branch=master)](https://travis-ci.org/McCannLab/HomogenFishOntario)
@@ -11,7 +11,7 @@
 
 
 
-Analysis pipeline used in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change" by Cazelles et al. (2019) DOI: 2Badded. 
+Analysis pipeline used in "Homogenization of freshwater lakes: recent compositional shifts in fish communities are explained by gamefish movement and not climate change" by [Cazelles et al. (2019) DOI:10.1111/gcb.14829](https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.14829).
 
 :warning: We are not allowed to share the exact lake locations, therefore, the context map and 3 supplementary figures cannot be reproduced with this research compendium. The data included in this package are released under [CC BY NC](https://creativecommons.org/licenses/by-nc/2.0/).
 

@@ -35,13 +35,13 @@ library(rfishbase)
 
 # Context
 
-This is a small web page that guides the reader through the code we used to carry out the analysis in Cazelles (2019). Note that `pipeline()` is a function that runs the entire analysis. We are not allowed to share the exact lake locations, therefore the context map and 3 supplementary figures cannot be reproduced.
+This is a small web page that guides the reader through the code we used to carry out the analysis in [Cazelles (2019) DOI: 10.1111/gcb.14829](https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.14829). Note that `pipeline()` is a function that runs the entire analysis. We are not allowed to share the exact lake locations, therefore the context map and 3 supplementary figures cannot be reproduced.
 
 
 # Data
 
 The file `sf_bsm_ahi` includes presence and absence in both survey for all
-species as well as the lake descriptors and climate data. 
+species as well as the lake descriptors and climate data.
 
 
 ```{R map, fig.height = 7}
