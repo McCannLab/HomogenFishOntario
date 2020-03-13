@@ -36,9 +36,9 @@ which sets up an R environment (takes 15-20min :hourglass:) and then a launches
 an [RStudio](https://www.rstudio.com/) instance. Once done, one can simply run:
 
 ```R
-remotes::install_github("McCannLab/HomogenFishOntario")
 # this first step is quick cause all packages required are already installed!
-library(HomogenFishOntario)
+library(devtools)
+load_all()
 pipeline()
 ```
 
